@@ -1,11 +1,9 @@
 {
   "name": "hum-cart",
-  "type": "commonjs",
   "version": "1.0.0",
   "scripts": {
-    "dev": "nodemon --exec ts-node server.ts",
-    "start": "node dist/server.js",
-    "build": "tsc"
+    "start": "ts-node --esm server.ts",
+    "dev": "nodemon --exec ts-node --esm server.ts"
   },
   "keywords": [],
   "author": "Mani",
