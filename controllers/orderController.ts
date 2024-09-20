@@ -4,7 +4,9 @@ import UserCollection from "../schemas/UserSchema";
 import { APP_CONSTANTS } from "../constants";
 import Stripe from "stripe";
 import Razorpay from "razorpay";
-import { log } from "console";
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 //Global variables
 const currency = "inr";

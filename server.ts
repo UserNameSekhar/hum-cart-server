@@ -1,22 +1,23 @@
-import cors from "cors";
-import "dotenv/config";
-import express from "express";
+import express from 'express';
+import cors from 'cors';
 import connectCloudinary from "./config/cloudinary";
 import { DBUtil } from "./database/DBUtil";
 import cartRouter from "./routers/cart/CartRouter";
 import orderRouter from "./routers/orders/OrderRouter";
 import productsRouter from "./routers/products/productsRouter";
 import userRouter from "./routers/users/userRouter";
+import dotenv from "dotenv";
 
 // Initialize the express application
-const app = express();
+const app:express.Application = express();
+
+//configure dot-env
+dotenv.config({
+  path: "./.env",
+});
 
 // Middlewares
 // app.use(cors());
-
-// app.use(cors({
-//   origin: '*', // Allow all origins
-// }));
 
 const corsOptions = {
   origin: ["https://hum-cart-admin.vercel.app", "https://hum-cart.vercel.app"],
@@ -24,12 +25,7 @@ const corsOptions = {
   credentials: true,
 };
 
-app.options('*', cors(corsOptions)); // Enable preflight for all routes
-
-
-// app.use(cors({
-//   origin: /localhost:[0-9]{4}$/, // Allows localhost with any port (e.g., 3000, 4000, etc.)
-// }));
+app.options("*", cors(corsOptions));
 
 app.use(express.json({ limit: "5mb" }));
 app.use(express.urlencoded({ extended: true, limit: "5mb" }));
