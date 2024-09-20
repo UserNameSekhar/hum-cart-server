@@ -1,21 +1,13 @@
-<<<<<<< HEAD
+
 import express from 'express';
 import cors from 'cors';
-=======
-import express from "express";
->>>>>>> 2ca92337f3bfc925bff982fd74bdef2faafd18ba
 import connectCloudinary from "./config/cloudinary";
 import { DBUtil } from "./database/DBUtil";
 import cartRouter from "./routers/cart/CartRouter";
 import orderRouter from "./routers/orders/OrderRouter";
 import productsRouter from "./routers/products/productsRouter";
 import userRouter from "./routers/users/userRouter";
-<<<<<<< HEAD
 import dotenv from "dotenv";
-=======
-import cors from "cors";
-import "dotenv/config";
->>>>>>> 2ca92337f3bfc925bff982fd74bdef2faafd18ba
 
 // Initialize the express application
 const app:express.Application = express();

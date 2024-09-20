@@ -1,20 +1,11 @@
 {
-<<<<<<< HEAD
   "name": "hum-cart",
-=======
-  "name": "server",
   "type": "commonjs",
->>>>>>> 2ca92337f3bfc925bff982fd74bdef2faafd18ba
   "version": "1.0.0",
   "scripts": {
-<<<<<<< HEAD
     "dev": "nodemon --exec ts-node server.ts",
-    "start": "node dist/server.js"
-=======
-    "build": "tsc",
     "start": "node dist/server.js",
-    "dev": "nodemon server.ts"
->>>>>>> 2ca92337f3bfc925bff982fd74bdef2faafd18ba
+    "build": "tsc"
   },
   "keywords": [],
   "author": "Mani",
