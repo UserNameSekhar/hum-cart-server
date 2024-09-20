@@ -1,5 +1,3 @@
-import cors from "cors";
-import "dotenv/config";
 import express from "express";
 import connectCloudinary from "./config/cloudinary";
 import { DBUtil } from "./database/DBUtil";
@@ -7,6 +5,8 @@ import cartRouter from "./routers/cart/CartRouter";
 import orderRouter from "./routers/orders/OrderRouter";
 import productsRouter from "./routers/products/productsRouter";
 import userRouter from "./routers/users/userRouter";
+import cors from "cors";
+import "dotenv/config";
 
 // Initialize the express application
 const app = express();
