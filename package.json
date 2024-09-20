@@ -1,11 +1,12 @@
 {
+  "type": "module",
   "name": "server",
   "version": "1.0.0",
   "description": "",
   "main": "server.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "server.ts",
+    "start": "ts-node server.ts",
     "dev": "nodemon server.ts"
   },
   "keywords": [],
