@@ -1,5 +1,6 @@
 {
   "name": "server",
+  "type": "commonjs",
   "version": "1.0.0",
   "description": "",
   "main": "server.ts",
