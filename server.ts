@@ -23,9 +23,13 @@ dotenv.config({
 const corsOptions = {
   origin: ["https://hum-cart-admin.vercel.app", "https://hum-cart.vercel.app"],
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  credentials: true,
+  credentials: true, // Allow credentials (cookies, etc.)
 };
 
+// Apply CORS middleware globally
+app.use(cors(corsOptions));
+
+// Handle preflight requests
 app.options("*", cors(corsOptions));
 
 app.use(express.json({ limit: "5mb" }));
